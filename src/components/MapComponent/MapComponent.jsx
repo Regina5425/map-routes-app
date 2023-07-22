@@ -11,13 +11,14 @@ import {
   getRoutesState,
   getMarkers,
 } from "../../store/selectors/routesSelectors";
-import { MyComp } from "../MyComp";
+import { getErrorRoutes } from "./../../store/selectors/errorsSelectors";
 const polyline = require("@mapbox/polyline");
 
 export const MapComponent = () => {
   const dispatch = useDispatch();
   const routesArr = useSelector(getRoutesState);
   const markers = useSelector(getMarkers);
+  const errorRoutes = useSelector(getErrorRoutes);
 
   const [geo, setGeo] = useState([]);
 
@@ -32,27 +33,29 @@ export const MapComponent = () => {
   useEffect(() => {
     if (routesArr.length !== 0) {
       setGeo(polyline.decode(routesArr[0].geometry));
-      console.log("routesArr", routesArr);
     }
   }, [routesArr]);
 
   return (
     <div id='map' className={cls.map}>
-      <MapContainer center={center} zoom={zoom}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-        />
-        {geo.length !== 0 && (
-          <>
-            <Polyline positions={geo} />
-            {markers.flatMap((marker) => (
-              <Marker position={marker} key={marker[1]} />
-            ))}
-          </>
-        )}
-        <MyComp />
-      </MapContainer>
+      {errorRoutes ? (
+        <h2>{errorRoutes}</h2>
+      ) : (
+        <MapContainer center={center} zoom={zoom}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+          />
+          {geo.length !== 0 && (
+            <>
+              <Polyline positions={geo} />
+              {markers.flatMap((marker) => (
+                <Marker position={marker} key={marker[1]} />
+              ))}
+            </>
+          )}
+        </MapContainer>
+      )}
     </div>
   );
 };

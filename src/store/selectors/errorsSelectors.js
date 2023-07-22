@@ -1,0 +1,1 @@
+export const getErrorRoutes = (state) => state.error.errorRoutes;
