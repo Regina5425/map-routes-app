@@ -1,12 +1,12 @@
 import cls from "./MapRoutes.module.scss";
 import { RoutesList } from "./../RoutesList/RoutesList";
-import { MapBlock } from "../MapBlock/MapBlock";
+import { MapComponent } from "../MapComponent/MapComponent";
 
 export const MapRoutes = () => {
   return (
     <div className={cls.mapRoutes}>
       <RoutesList />
-      <MapBlock />
+      <MapComponent />
     </div>
   );
 };
