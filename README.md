@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## О проекте
 
-Приложение реализовано согласно <a href="https://docs.google.com/document/d/17GeI1SqJNc9Cp-R6n647tluEf1Qh157C/edit?usp=sharing&ouid=100444235111740431534&rtpof=true&sd=true">тестового задания</a>
+Приложение реализовано согласно <a href="https://docs.google.com/document/d/17GeI1SqJNc9Cp-R6n647tluEf1Qh157C/edit?usp=sharing&ouid=100444235111740431534&rtpof=true&sd=true">тестовому заданию</a>
 <br />
 
 ### Функционал
