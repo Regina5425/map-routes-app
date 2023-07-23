@@ -1,9 +1,9 @@
-import cls from "./Title.module.scss";
+import "./Title.scss";
 
-export const Title = () => {
+export const TitleMain = () => {
   return (
-    <div className={cls.titleBlock}>
-      <h1 className={cls.title}>Маршруты</h1>
+    <div>
+      <h1 className='title'>Маршруты</h1>
     </div>
   );
 };

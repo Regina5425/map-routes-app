@@ -1,10 +1,10 @@
-import cls from "./MapRoutes.module.scss";
 import { RoutesList } from "./../RoutesList/RoutesList";
 import { MapComponent } from "../MapComponent/MapComponent";
+import "./MapRoutes.scss";
 
 export const MapRoutes = () => {
   return (
-    <div className={cls.mapRoutes}>
+    <div className='mapRoutes'>
       <RoutesList />
       <MapComponent />
     </div>

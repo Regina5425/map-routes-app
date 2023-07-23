@@ -1,15 +1,15 @@
 import React from "react";
-import { Title } from "../components/Title/Title";
+import { TitleMain } from "../components/Title/Title";
 import { MapRoutes } from "../components/MapRoutes/MapRoutes";
-import cls from "./App.module.scss";
+import "./App.scss";
 
-function App() {
+const App = () => {
   return (
-    <div className={cls.app}>
-      <Title />
+    <div className='app'>
+      <TitleMain />
       <MapRoutes />
     </div>
   );
-}
+};
 
 export default App;

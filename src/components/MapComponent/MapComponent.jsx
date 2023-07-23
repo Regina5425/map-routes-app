@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { MapContainer } from "react-leaflet";
 import { useDispatch, useSelector } from "react-redux";
-import cls from "./MapComponent.module.scss";
 import { setCenter, setZoom } from "../../store/reducers/mapViewSlice";
 import {
   getMapViewCenter,
@@ -9,6 +8,7 @@ import {
 } from "./../../store/selectors/mapViewSelector";
 import { getErrorRoutes } from "./../../store/selectors/errorsSelectors";
 import { MapLayer } from "../MapLayer/MapLayer";
+import "./MapComponent.scss";
 
 export const MapComponent = () => {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export const MapComponent = () => {
   }, [dispatch, center, zoom]);
 
   return (
-    <div id='map' className={cls.map}>
+    <div id='map' className='map'>
       {errorRoutes ? (
         <h2>{errorRoutes}</h2>
       ) : (

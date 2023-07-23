@@ -1,0 +1,25 @@
+.routes {
+  padding: 0;
+  padding-right: 20px;
+  width: 250px;
+  height: 100vh;
+  border-right: 1px solid var(--main-color);
+  list-style: none;
+}
+
+.route {
+  margin-bottom: 10px;
+}
+
+.ant-divider {
+  margin: 10px 0;
+}
+
+.ant-btn {
+  color: var(--main-color);
+}
+
+.active {
+  background-color: var(--accent-color);
+  color: var(--background);
+}
