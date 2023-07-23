@@ -2,17 +2,13 @@
 <br />
 <div align="center">
   <h1 align="center">Map Routes App</h1>
-
-  <p align="center">
-    Приложение по отображению маршрутов на карте
-  </p>
 </div>
 
 
 <!-- ABOUT THE PROJECT -->
 ## О проекте
 
-Приложение реализовано согласно <a href="https://docs.google.com/document/d/17GeI1SqJNc9Cp-R6n647tluEf1Qh157C/edit?usp=sharing&ouid=100444235111740431534&rtpof=true&sd=true">тестовому заданию</a>
+Приложение по отображению маршрутов на карте
 <br />
 
 ### Функционал
